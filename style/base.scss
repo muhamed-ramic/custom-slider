@@ -1,0 +1,144 @@
+@import "./typography";
+@import "./mixin";
+@import "./footer";
+@import "./helper";
+@import "./slider-custom";
+
+.main {
+  margin-top: 100px;
+  %curve-spefic {
+    position: absolute;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+  }
+
+  &-curve {
+    @extend %curve-spefic;
+    display: block;
+
+    @include breakpoint-small() {
+      display: none;
+    }
+  }
+
+  &-curve-mobile {
+    display: none;
+    @extend %curve-spefic;
+
+    @include breakpoint-small() {
+      display: block;
+      top:  20px;
+      width: 70%;
+      bottom: -100px;
+    }
+  }
+  
+  &-bg {
+    position: absolute;
+    right: -50px;
+    width: fit-content;
+    user-select: none;
+    transform: scale(0.63) translate(-73px, -9px);
+  }
+  &-quote {
+    position: absolute;
+    top: -75px;
+    left: 10px;
+    transform: scale(0.5);
+
+    @include breakpoint-small() {
+      top: -50px;
+      left: 45%;
+      transform: scale(0.5) translateX(-50%);
+    }
+  }
+  &__story {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 450px;
+    box-shadow: 2px 2px 6px 1px black;
+    background-color: white;
+    max-width: 1120px;
+    margin: 15px auto;
+
+    & > article {
+      display: flex;
+      flex-wrap: nowrap;
+      padding: 0 10%;
+    }
+
+    &-half {
+      width: 50%;
+      display: inline-block
+    }
+    &-left {
+      width: 70%;
+      @include breakpoint-small() {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &-right {
+      width: 55%;
+      & > img {
+        z-index: 9;
+        position: absolute;
+        box-shadow: 2px 2px 6px 1px black;
+        top: 50%;
+        right: 10%;
+        pointer-events: none;
+        user-select: none;
+        transform: translateY(-50%);
+        height: 75%;
+      }
+    }
+
+    &-name {
+      font-weight: 600;
+    }
+
+    &-job {
+      color: #ceced1;
+      font-size: 14px;
+      font-weight: normal;
+      margin-left: 10px;
+    }
+
+    &-navigation {
+      background: #eeeeee;
+      border-radius: 35%;
+      padding: 10px 15px;
+      height: auto;
+      z-index: 1000;
+      right: 30%;
+      bottom: 40px;
+      position: absolute;
+
+      & > a {
+        display: inline-block;
+        margin-left: -5px;
+        width: 10px;
+        height: 18px;
+
+        & > img {
+          width: 10px;
+          height: 12px;
+        }
+
+        &:nth-of-type(2) {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+blockquote {
+  position: relative;
+  font-size: 24px;
+  margin: 0;
+  z-index: 10;
+}

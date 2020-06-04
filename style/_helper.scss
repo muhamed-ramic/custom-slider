@@ -1,0 +1,12 @@
+.highlight {
+  background-color: rgba(yellow, 0.5);
+}
+
+.item-hidden {
+  display: none !important;
+}
+
+.active {
+  display: block !important;
+  animation: fade 1s ease-in;
+}

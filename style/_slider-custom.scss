@@ -1,0 +1,27 @@
+@keyframes fade {
+  from {opacity: 0.3}
+  to {opacity: 1}
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: translateX(-300px);
+  }
+  
+  100% {
+    transform: translateX(1200px);
+  }
+}
+
+.previous-slide  {
+  animation: fadeOut 0.3s linear;
+  display: none;
+}
+
+.slider-item {
+  padding: 0 100px;
+
+  @include breakpoint-small() {
+    padding: 750px 20px 0 20px;
+  }
+}
