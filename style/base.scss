@@ -28,12 +28,12 @@
 
     @include breakpoint-small() {
       display: block;
-      top:  20px;
+      top: 20px;
       width: 70%;
       bottom: -100px;
     }
   }
-  
+
   &-bg {
     position: absolute;
     right: -50px;
@@ -41,6 +41,7 @@
     user-select: none;
     transform: scale(0.63) translate(-73px, -9px);
   }
+
   &-quote {
     position: absolute;
     top: -75px;
@@ -53,6 +54,7 @@
       transform: scale(0.5) translateX(-50%);
     }
   }
+
   &__story {
     display: flex;
     align-items: center;
@@ -71,8 +73,9 @@
 
     &-half {
       width: 50%;
-      display: inline-block
+      display: inline-block;
     }
+
     &-left {
       width: 70%;
       @include breakpoint-small() {
@@ -83,6 +86,7 @@
 
     &-right {
       width: 55%;
+
       & > img {
         z-index: 9;
         position: absolute;
@@ -108,7 +112,7 @@
     }
 
     &-navigation {
-      background: #eeeeee;
+      background: "#eee";
       border-radius: 35%;
       padding: 10px 15px;
       height: auto;
